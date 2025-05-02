@@ -123,9 +123,9 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## 📞 Contato
 
-Seu Nome – seuemail@exemplo.com
+Pedro Santos - phmsanttos@gmail.com 
 
-Projeto: [https://github.com/seu-usuario/payment-system](https://github.com/seu-usuario/payment-system)
+Projeto: [https://github.com/pedroinnovano/payment-system](https://github.com/pedroinnovano/payment-system)
 
 ---
 
