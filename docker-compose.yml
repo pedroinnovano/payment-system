@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  payment-api:
+    build:
+      context: ./payment-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - JWT_SECRET=d3f2ab67212a7c5d2dcdb9428c145a13409c92f9ba717c6a97799a45345ceafc82e771beba5a5f0961925be0c8837012b9ba9d56630663f9d9f4633586bc33dde5b42284c12f74efb6acc317b517237b29932fd11e37a62fd5a1f8b535781fcdc8d3e35dfdb746e5c2e262b8b485f0d5dcf81cfb6ca6a6f6cc5982643d6d0771906f8be5ec8e056cb9597fc09c5f27e8e1d1e125f3bd500059bc45d0d0c80b3fde3ecb7b1da5e39d50835572f7fe6cf7428c5c98950500f01b8ef0e5329a40f1a6946ca1663c2ae4ce3c2a6877ac85e6cb3a101b68cfb54374abd375932474c6aeb5baf7d1c451fa0614f7bd5597513e111eedde853aa6f235945fe6109ee467
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+  payment-client:
+    build:
+      context: ./payment-client
+    ports:
+      - "5173:80"
+    depends_on:
+      - payment-api
+    environment:
+      - VITE_API_BASE_URL=http://localhost:3000/api
+
+volumes:
+  redis-data:

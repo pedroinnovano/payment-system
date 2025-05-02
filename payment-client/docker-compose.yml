@@ -1,0 +1,6 @@
+payment-client:
+  build: ./payment-client
+  ports:
+    - "5173:80"
+  links:
+    - payment-api
