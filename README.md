@@ -50,7 +50,7 @@ REDIS_URL=redis://redis:6379
 #### `payment-client/.env.production`
 
 ```env
-VITE_API_BASE_URL=http://payment-api:3000/api
+VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
 ### 2. Suba os serviços
@@ -92,16 +92,6 @@ docker-compose up --build
 - Tailwind CSS
 - Axios
 - Docker
-
----
-
-## 📈 Melhorias futuras
-
-- [ ] Integração com banco de dados real
-- [ ] Tela de histórico de pagamentos
-- [ ] Testes unitários e E2E
-- [ ] Dashboard de monitoramento
-- [ ] WebSocket para atualização em tempo real
 
 ---
 
