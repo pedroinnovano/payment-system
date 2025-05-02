@@ -33,7 +33,7 @@ projetos_novo/
 ### 🔧 Passos
 
 ```bash
-git clone https://github.com/seu-usuario/payment-system.git
+git clone https://github.com/pedroinnovano/payment-system.git
 cd payment-system
 ```
 
